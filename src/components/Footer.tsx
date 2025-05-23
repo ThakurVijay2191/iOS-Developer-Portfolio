@@ -53,13 +53,13 @@ const Footer: React.FC = () => {
         
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 mb-4 md:mb-0">
-            © {currentYear} John Appleseed. All rights reserved.
+            © {currentYear} Vijay Thakur. All rights reserved.
           </p>
           
           <p className="text-gray-400 flex items-center">
             Made with 
             <Heart className="h-4 w-4 text-red-500 mx-1" />
-            in San Francisco
+            in Punjab, India
           </p>
         </div>
       </div>

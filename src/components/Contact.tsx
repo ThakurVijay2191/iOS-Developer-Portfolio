@@ -60,8 +60,8 @@ const Contact: React.FC = () => {
                   <Mail className="h-6 w-6 text-blue-600 dark:text-blue-400 mr-4 mt-1" />
                   <div>
                     <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">Email</p>
-                    <a href="mailto:john@example.com" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
-                      john@example.com
+                    <a href="mailto:thakurvijay0006@gmail.com" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
+                      thakurvijay0006@gmail.com
                     </a>
                   </div>
                 </div>
@@ -71,7 +71,7 @@ const Contact: React.FC = () => {
                   <div>
                     <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">Phone</p>
                     <a href="tel:+1234567890" className="text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
-                      +1 (234) 567-890
+                      +91 8146408509
                     </a>
                   </div>
                 </div>
@@ -81,7 +81,7 @@ const Contact: React.FC = () => {
                   <div>
                     <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">Location</p>
                     <p className="text-gray-900 dark:text-white">
-                      San Francisco, California
+                      Punjab, India
                     </p>
                   </div>
                 </div>
@@ -95,7 +95,7 @@ const Contact: React.FC = () => {
               
               <div className="flex space-x-4">
                 <a 
-                  href="https://github.com" 
+                  href="https://github.com/ThakurVijay2191" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="p-3 bg-gray-100 dark:bg-gray-700 rounded-full text-gray-900 dark:text-white hover:bg-blue-100 dark:hover:bg-blue-900/30 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
@@ -105,23 +105,13 @@ const Contact: React.FC = () => {
                 </a>
                 
                 <a 
-                  href="https://linkedin.com" 
+                  href="https://www.linkedin.com/in/vijay-thakur-984646223/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="p-3 bg-gray-100 dark:bg-gray-700 rounded-full text-gray-900 dark:text-white hover:bg-blue-100 dark:hover:bg-blue-900/30 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="h-6 w-6" />
-                </a>
-                
-                <a 
-                  href="https://twitter.com" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="p-3 bg-gray-100 dark:bg-gray-700 rounded-full text-gray-900 dark:text-white hover:bg-blue-100 dark:hover:bg-blue-900/30 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
-                  aria-label="Twitter"
-                >
-                  <Twitter className="h-6 w-6" />
                 </a>
               </div>
             </div>

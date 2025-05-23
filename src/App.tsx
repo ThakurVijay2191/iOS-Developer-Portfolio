@@ -24,7 +24,7 @@ function App() {
     });
     
     // Update document title
-    document.title = 'John Appleseed | iOS Developer';
+    document.title = 'Vijay Thakur | iOS Developer';
     
     // Add the grid pattern CSS variable for background
     document.documentElement.style.setProperty(
