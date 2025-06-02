@@ -1,35 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowDown, ChevronRight } from 'lucide-react';
+import * as sanityService from '../sanity/sanityService.ts'
 
 const Hero: React.FC = () => {
   const [typedText, setTypedText] = useState('');
   const [showCursor, setShowCursor] = useState(true);
   const fullText = ' Software Engineer';
-  
-  useEffect(() => {
-    let currentIndex = 0;
-    let intervalId: number;
-    
-    const typeText = () => {
-      if (currentIndex < fullText.length) {
-        setTypedText(fullText.substring(0, currentIndex + 1));
-        currentIndex++;
-      } else {
-        clearInterval(intervalId);
-      }
-    };
-    
-    intervalId = window.setInterval(typeText, 100);
-    
-    const cursorIntervalId = window.setInterval(() => {
-      setShowCursor(prev => !prev);
-    }, 500);
-    
-    return () => {
-      clearInterval(intervalId);
-      clearInterval(cursorIntervalId);
-    };
-  }, []);
+  const [user, setUser] = useState(null);
+
+   useEffect(() => {
+    const loadUser = async () => {
+      const data = await sanityService.fetchSingleUser()
+      console.log(data)
+      setUser(data)
+    }
+
+    loadUser()
+  }, [])
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
@@ -42,21 +29,18 @@ const Hero: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6 py-12 md:py-24">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6">
-            Vijay Thakur
+            {user?.name || 'Loading...'}
             <br />
             <h5 className="text-xl md:text-xl lg:text-2xl font-bold text-gray-900 dark:text-white mb-4 mt-2">
-              📱 iOS Developer | Passionate about Crafting Seamless Mobile Experiences 🚀
+              {user?.title || 'Loading...'}
             </h5>
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-blue-400 dark:to-cyan-400">
-              {typedText}
-              <span className={`${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-100`}>|</span>
+              {user?.designation || 'Loading...'}
             </span>
           </h1>
           
           <p className="text-xl text-gray-700 dark:text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-           With 2.5 years of experience in iOS development, I thrive on turning innovative ideas into user-friendly, high-performance mobile applications. My expertise lies in leveraging the latest technologies and design principles to create apps that resonate with users and exceed expectations.
-
-Whether it's building elegant UIs, optimizing app performance, or integrating complex features, I am committed to delivering top-notch solutions that make a difference. I thrive in collaborative environments, where I can contribute my skills in Swift, Objective-C, and various frameworks to drive project success.
+            {user?.description || 'Loading...'}
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
